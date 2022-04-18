@@ -54,6 +54,16 @@ namespace Encryption_Tool
                 csp.ImportParameters(_publicKey);
 
                 var data = Encoding.Unicode.GetBytes(plainText);
+                var cypher = csp.Encrypt(data, false);
+                return Convert.ToBase64String(cypher);
+            }
+
+            public string Decrypt(string cypherText)
+            {
+                var dataBytes = Convert.FromBase64String(cypherText);
+                csp.ImportParameters(_privateKey);
+                var plainText = csp.Decrypt(dataBytes, false);
+                return Encoding.Unicode.GetString(plainText);
             }
         }
     }

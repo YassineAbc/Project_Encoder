@@ -1,0 +1,16 @@
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool.csproj.SuggestedBindingRedirects.cache
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\MainWindow.g.cs
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\App.g.cs
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool_MarkupCompile.cache
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool_MarkupCompile.lref
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\bin\Debug\Encryption Tool.exe.config
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\bin\Debug\Encryption Tool.exe
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\bin\Debug\Encryption Tool.pdb
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\MainWindow.baml
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool.g.resources
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption_Tool.Properties.Resources.resources
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool.csproj.GenerateResource.cache
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool.exe
+\\Mac\Home\Documents\Programming\Projects\Project_Encoder\Encryption Tool\obj\Debug\Encryption Tool.pdb

@@ -48,7 +48,7 @@ namespace Encryption_Tool
                 return sw.ToString();
             }
 
-            public string Encrypte(string plainText)
+            public string Encrypt(string plainText)
             {
                 csp = new RSACryptoServiceProvider();
                 csp.ImportParameters(_publicKey);
@@ -65,6 +65,18 @@ namespace Encryption_Tool
                 var plainText = csp.Decrypt(dataBytes, false);
                 return Encoding.Unicode.GetString(plainText);
             }
+        }
+
+        private void BtnEncrypt_Click(object sender, RoutedEventArgs e)
+        {
+            RsaEncryption rsa = new RsaEncryption();
+            string cypher = string.Empty;
+
+            UserSecret.Text = cypher;
+
+            cypher = rsa.Encrypt(cypher);
+
+            TxtShowText.Text = cypher;
         }
     }
 }

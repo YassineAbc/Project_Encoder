@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Encryption_Tool
 {
@@ -23,6 +26,35 @@ namespace Encryption_Tool
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public class RsaEncryption
+        {
+            private static RSACryptoServiceProvider csp = new RSACryptoServiceProvider(2048);
+            private RSAParameters _privateKey;
+            private RSAParameters _publicKey;
+
+            public RsaEncryption()
+            {
+                _privateKey = csp.ExportParameters(true);
+                _publicKey = csp.ExportParameters(false);
+            }
+
+            public string GetPublicKey()
+            {
+                var sw = new StringWriter();
+                var xs = new XmlSerializer(typeof(RSAParameters));
+                xs.Serialize(sw, _publicKey);
+                return sw.ToString();
+            }
+
+            public string Encrypte(string plainText)
+            {
+                csp = new RSACryptoServiceProvider();
+                csp.ImportParameters(_publicKey);
+
+                var data = Encoding.Unicode.GetBytes(plainText);
+            }
         }
     }
 }

@@ -8,9 +8,27 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox x:Name="UserSecret" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="144" Height="42"/>
-        <Button x:Name="BtnEncrypt" Content="Encrypt" HorizontalAlignment="Left" Margin="285,288,0,0" VerticalAlignment="Top" Click="BtnEncrypt_Click"/>
-        <Button x:Name="BtnDecrypt" Content="Decrypt" HorizontalAlignment="Left" Margin="458,288,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtShowText" HorizontalAlignment="Center" Height="107" Margin="0,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
+        <Button x:Name="BtnEncrypt" Content="Encrypt" HorizontalAlignment="Left" Margin="268,292,0,0" VerticalAlignment="Top" Click="BtnEncrypt_Click" Height="32" Width="61"/>
+        <Button x:Name="BtnDecrypt" Content="Decrypt" HorizontalAlignment="Left" Margin="473,292,0,0" VerticalAlignment="Top" Click="BtnDecrypt_Click" RenderTransformOrigin="1.281,0.82" Height="32" Width="61">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.616"/>
+                    <TranslateTransform X="-0.127" Y="0.511"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="TxtShowText" HorizontalAlignment="Left" Height="135" Margin="228,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.189"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
 
     </Grid>
 </Window>

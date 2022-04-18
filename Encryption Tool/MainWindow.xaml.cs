@@ -28,6 +28,8 @@ namespace Encryption_Tool
             InitializeComponent();
         }
 
+        public string secret = "";
+
         public class RsaEncryption
         {
             private static RSACryptoServiceProvider csp = new RSACryptoServiceProvider(2048);
@@ -37,7 +39,7 @@ namespace Encryption_Tool
             public RsaEncryption()
             {
                 _privateKey = csp.ExportParameters(true);
-                _publicKey = csp.ExportParameters(false);
+                _publicKey = csp.ExportParameters(true);
             }
 
             public string GetPublicKey()
@@ -69,14 +71,26 @@ namespace Encryption_Tool
 
         private void BtnEncrypt_Click(object sender, RoutedEventArgs e)
         {
+            TxtShowText.Text = "";
             RsaEncryption rsa = new RsaEncryption();
             string cypher = string.Empty;
 
             UserSecret.Text = cypher;
 
-            cypher = rsa.Encrypt(cypher);
+            cypher = rsa.Encrypt(secret);
+            secret = cypher;
 
             TxtShowText.Text = cypher;
+        }
+
+        private void BtnDecrypt_Click(object sender, RoutedEventArgs e)
+        {
+            TxtShowText.Text = "";
+            RsaEncryption rsa = new RsaEncryption();
+
+            secret = rsa.Decrypt(secret);
+
+            TxtShowText.Text = secret;
         }
     }
 }
